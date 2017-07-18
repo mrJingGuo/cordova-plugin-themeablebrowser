@@ -893,7 +893,7 @@
     self.view.backgroundColor = [CDVThemeableBrowserViewController colorFromRGBA:[self getStringFromDict:_browserOptions.statusbar withKey:kThemeableBrowserPropColor withDefault:@"#ffffffff"]];
     [self.view addSubview:self.toolbar];
     // [self.view addSubview:self.addressLabel];
-    // [self.view addSubview:self.spinner];
+    [self.view addSubview:self.spinner];
 }
 
 /**
