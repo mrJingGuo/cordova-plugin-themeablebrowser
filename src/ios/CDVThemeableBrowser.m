@@ -693,12 +693,16 @@
 
     self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     self.spinner.alpha = 1.000;
+    self.spinner.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    self.spinner.layer.cornerRadius = 5;
+    self.spinner.layer.masksToBounds = TRUE;
+    self.spinner.color =[UIColor whiteColor];
     self.spinner.autoresizesSubviews = YES;
-    self.spinner.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+    self.spinner.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin);
     self.spinner.clearsContextBeforeDrawing = NO;
     self.spinner.clipsToBounds = NO;
     self.spinner.contentMode = UIViewContentModeScaleToFill;
-    self.spinner.frame = CGRectMake(454.0, 231.0, 20.0, 20.0);
+    self.spinner.frame = CGRectMake(CGRectGetMidX(self.webView.frame)-30, CGRectGetMidY(self.webView.frame), 60.0, 60.0);
     self.spinner.hidden = YES;
     self.spinner.hidesWhenStopped = YES;
     self.spinner.multipleTouchEnabled = NO;
