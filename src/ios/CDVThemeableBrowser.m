@@ -881,6 +881,7 @@
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         self.titleLabel.numberOfLines = 1;
         self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:17.0f];
         self.titleLabel.textColor = [CDVThemeableBrowserViewController colorFromRGBA:[self getStringFromDict:_browserOptions.title withKey:kThemeableBrowserPropColor withDefault:@"#000000ff"]];
 
         if (_browserOptions.title[kThemeableBrowserPropStaticText]) {
